@@ -34,3 +34,6 @@ npm-debug.log*
 
 # Knex
 migrations/*.js
+
+# Local Netlify folder
+.netlify
