@@ -37,7 +37,7 @@ export class UsersService {
     if (existingUser) {
       throw new ConflictException(`User with email '${createUserDto.email}' already exists`);
     }
-    const [id] = await this.knex('users').insert({
+    const ids = await this.knex('users').insert({
       email: createUserDto.email,
       password_hash: createUserDto.password,
       first_name: createUserDto.first_name,
@@ -50,8 +50,8 @@ export class UsersService {
       avatar_url: createUserDto.avatar_url,
       created_at: this.knex.fn.now(),
       updated_at: this.knex.fn.now(),
-    });
-    return this.findOne(id);
+    }).returning('id');
+    return this.findOne(ids[0].id);
   }
 
   async update(id: number, updateUserDto: UpdateUserDto): Promise<UserWithRoles> {
