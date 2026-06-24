@@ -13,10 +13,6 @@
   to = "/.netlify/functions/main"
   status = 200
 
-[functions]
-  [functions.node_bundle]
-  external_node_modules = []
-
 # Environment variables for production (set these in Netlify UI):
 # DATABASE_HOST
 # DATABASE_PORT
