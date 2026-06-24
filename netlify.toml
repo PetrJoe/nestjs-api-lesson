@@ -13,6 +13,47 @@
   to = "/.netlify/functions/main"
   status = 200
 
+# Frontend API calls (without /api/ prefix)
+[[redirects]]
+  from = "/roles"
+  to = "/.netlify/functions/main"
+  status = 200
+
+[[redirects]]
+  from = "/roles/*"
+  to = "/.netlify/functions/main"
+  status = 200
+
+[[redirects]]
+  from = "/users"
+  to = "/.netlify/functions/main"
+  status = 200
+
+[[redirects]]
+  from = "/users/*"
+  to = "/.netlify/functions/main"
+  status = 200
+
+[[redirects]]
+  from = "/farmer-profiles"
+  to = "/.netlify/functions/main"
+  status = 200
+
+[[redirects]]
+  from = "/farmer-profiles/*"
+  to = "/.netlify/functions/main"
+  status = 200
+
+[[redirects]]
+  from = "/distributor-profiles"
+  to = "/.netlify/functions/main"
+  status = 200
+
+[[redirects]]
+  from = "/distributor-profiles/*"
+  to = "/.netlify/functions/main"
+  status = 200
+
 # Environment variables for production (set these in Netlify UI):
 # DATABASE_HOST
 # DATABASE_PORT
