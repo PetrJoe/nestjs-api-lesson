@@ -24,7 +24,7 @@ async function bootstrapServer() {
     .setVersion('1.0')
     .addTag('hfap', 'HFAP API endpoints')
     .addServer('http://localhost:3000', 'Local development')
-    .addServer('https://your-netlify-app.netlify.app', 'Production')
+    .addServer('hfap.netlify.app', 'Production')
     .build();
   
   const document = SwaggerModule.createDocument(app, config);
