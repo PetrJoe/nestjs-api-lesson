@@ -6,6 +6,7 @@ import { RolesModule } from './roles/roles.module';
 import { UsersModule } from './users/users.module';
 import { FarmerProfilesModule } from './farmer-profiles/farmer-profiles.module';
 import { DistributorProfilesModule } from './distributor-profiles/distributor-profiles.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { DistributorProfilesModule } from './distributor-profiles/distributor-pr
     UsersModule,
     FarmerProfilesModule,
     DistributorProfilesModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
