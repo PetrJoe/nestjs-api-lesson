@@ -14,7 +14,8 @@
   status = 200
 
 [functions]
-  node_bundle = true
+  [functions.node_bundle]
+  external_node_modules = []
 
 # Environment variables for production (set these in Netlify UI):
 # DATABASE_HOST
