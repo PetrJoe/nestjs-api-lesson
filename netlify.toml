@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_ENV = "production"
+
+# Redirect all API requests to the serverless function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/main"
+  status = 200
+
+[functions]
+  node_bundle = true
+
+# Environment variables for production (set these in Netlify UI):
+# DATABASE_HOST
+# DATABASE_PORT
+# DATABASE_USERNAME
+# DATABASE_PASSWORD
+# DATABASE_NAME
